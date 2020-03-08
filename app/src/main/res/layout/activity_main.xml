@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"/>
             <ImageView
                 android:layout_alignParentRight="true"
-                android:src="@drawable/heart_PNG51335"
+                android:src="@drawable/heart_png51335"
                 android:layout_width="62dp"
                 android:layout_height="62dp"/>
 
