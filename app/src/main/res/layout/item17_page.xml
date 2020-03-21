@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#cc9bb3">
-
+<!--dfadf-->
     <TextView
         android:id="@+id/item17_Question"
         android:layout_width="363dp"
