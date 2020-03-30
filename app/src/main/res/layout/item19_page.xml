@@ -47,7 +47,8 @@
         android:text="NEXT"
         android:background="#FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
         android:id="@+id/item19_checkBox_level0"
@@ -58,7 +59,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item19_Question" />
+        app:layout_constraintTop_toBottomOf="@+id/item19_Question"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
         android:id="@+id/item19_checkBox_level1"
@@ -69,7 +71,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toEndOf="@+id/item19_checkBox_level0"
-        app:layout_constraintTop_toBottomOf="@+id/item19_Question" />
+        app:layout_constraintTop_toBottomOf="@+id/item19_Question"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
         android:id="@+id/item19_checkBox_level2"
@@ -80,7 +83,8 @@
         app:layout_constraintEnd_toStartOf="@+id/item19_checkBox_level3"
         app:layout_constraintHorizontal_bias="0.392"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item19_checkBox_level0" />
+        app:layout_constraintTop_toBottomOf="@+id/item19_checkBox_level0"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
         android:id="@+id/item19_checkBox_level3"
@@ -91,7 +95,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.694"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item19_checkBox_level1" />
+        app:layout_constraintTop_toBottomOf="@+id/item19_checkBox_level1"
+        android:onClick="onCheckboxClicked"/>
 
     <CheckBox
         android:id="@+id/item19_checkBox_level4"
@@ -102,7 +107,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item19_checkBox_level2" />
+        app:layout_constraintTop_toBottomOf="@+id/item19_checkBox_level2"
+        android:onClick="onCheckboxClicked"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
