@@ -22,7 +22,6 @@ public class ActivityItemPage1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item1_page);
         Button button = findViewById(R.id.item1_button_next);
-        boolean isCheck = false;
         never = findViewById(R.id.item1_checkBox_level0);
         rarely = findViewById(R.id.item1_checkBox_level2);
         always = findViewById(R.id.item1_checkBox_level4);

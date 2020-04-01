@@ -30,7 +30,7 @@ public class ActivityItemPage3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(never.isChecked() || rarely.isChecked() || always.isChecked() || hardly.isChecked() || often.isChecked()) {
-                    Intent intent = new Intent(getApplicationContext(), ActivityItemPage3.class);
+                    Intent intent = new Intent(getApplicationContext(), ActivityItemPage4.class);
                     answer.add(level);
                     intent.putExtra("ans",answer);
                     startActivity(intent);

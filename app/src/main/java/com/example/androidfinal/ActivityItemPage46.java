@@ -7,10 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class ActivityItemPage46 extends AppCompatActivity {
 
     private CheckBox never, rarely, always, hardly, often;
+    private  int level;
+    private ArrayList<Integer> answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,18 @@ public class ActivityItemPage46 extends AppCompatActivity {
         always = findViewById(R.id.item46_checkBox_level4);
         hardly = findViewById(R.id.item46_checkBox_level1);
         often = findViewById(R.id.item46_checkBox_level3);
+        Button predict = findViewById(R.id.item46_button_predict);
+        answer = (ArrayList<Integer>) getIntent().getSerializableExtra("ans");
+        predict.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (never.isChecked() || rarely.isChecked() || always.isChecked() || hardly.isChecked() || often.isChecked()) {
+                    answer.add(level);
+                    Toast toast = Toast.makeText(getApplicationContext(),answer.toString(),Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            }
+        });
 
 
     }
@@ -32,30 +49,35 @@ public class ActivityItemPage46 extends AppCompatActivity {
                 always.setChecked(false);
                 hardly.setChecked(false);
                 often.setChecked(false);
+                level = 0;
                 break;
             case R.id.item46_checkBox_level2:
                 never.setChecked(false);
                 always.setChecked(false);
                 hardly.setChecked(false);
                 often.setChecked(false);
+                level = 2;
                 break;
             case R.id.item46_checkBox_level4:
                 rarely.setChecked(false);
                 never.setChecked(false);
                 hardly.setChecked(false);
                 often.setChecked(false);
+                level = 4;
                 break;
             case R.id.item46_checkBox_level1:
                 rarely.setChecked(false);
                 always.setChecked(false);
                 never.setChecked(false);
                 often.setChecked(false);
+                level = 1;
                 break;
             case R.id.item46_checkBox_level3:
                 rarely.setChecked(false);
                 always.setChecked(false);
                 hardly.setChecked(false);
                 never.setChecked(false);
+                level = 3;
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());
