@@ -16,9 +16,11 @@ public class ActivityItemPage46 extends AppCompatActivity {
     private CheckBox never, rarely, always, hardly, often;
     private  int level;
     private ArrayList<Integer> answer;
+    private CallPythonScript callPythonScript;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        callPythonScript = new CallPythonScript();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item46_page);
         never = findViewById(R.id.item46_checkBox_level0);
@@ -28,12 +30,13 @@ public class ActivityItemPage46 extends AppCompatActivity {
         often = findViewById(R.id.item46_checkBox_level3);
         Button predict = findViewById(R.id.item46_button_predict);
         answer = (ArrayList<Integer>) getIntent().getSerializableExtra("ans");
+        callPythonScript.call(answer.toString());
         predict.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (never.isChecked() || rarely.isChecked() || always.isChecked() || hardly.isChecked() || often.isChecked()) {
                     answer.add(level);
-                    Toast toast = Toast.makeText(getApplicationContext(),answer.toString(),Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(),callPythonScript.getAnswer(),Toast.LENGTH_LONG);
                     toast.show();
                 }
             }
