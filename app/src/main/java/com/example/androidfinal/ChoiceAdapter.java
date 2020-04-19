@@ -4,9 +4,11 @@ import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -27,9 +29,10 @@ public class ChoiceAdapter extends RecyclerView.Adapter<ChoiceAdapter.MyViewHold
     public void setColor(int position){
         for (int i = 0; i < choices.length; i++) {
             if(i == position){
+
                 itemViewList.get(i).setBackgroundColor(Color.parseColor("#567845"));
             }else{
-                itemViewList.get(i).setBackgroundColor(Color.parseColor("#ffffff"));
+                itemViewList.get(i).setBackgroundColor(Color.TRANSPARENT);
             }
         }
     }
@@ -45,14 +48,17 @@ public class ChoiceAdapter extends RecyclerView.Adapter<ChoiceAdapter.MyViewHold
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView choiceText;
-        private LinearLayout linearLayout;
+        CardView cardView;
+//        private LinearLayout linearLayout;
+//        private CardView cardView;
 
 
         public MyViewHolder(final View itemView, final ChoiceAdapter.OnItemClickListener listener) {
             super(itemView);
             choiceText = itemView.findViewById(R.id.choiceText);
-            linearLayout = itemView.findViewById(R.id.linearLayout);
 
+//            linearLayout = itemView.findViewById(R.id.linearLayout);
+//            cardView = itemView.findViewById(R.id.cardView);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class PredictionPage extends AppCompatActivity {
 
-    private TextView question,questionBox;
+    private TextView question,questionBox,nextText;
     private ArrayList<Integer> answer = new ArrayList<>();
     private RecyclerView choiceRecycle;
     private String no = "Question ";
@@ -38,27 +38,42 @@ public class PredictionPage extends AppCompatActivity {
         setContentView(R.layout.activity_prediciton_page);
         question = findViewById(R.id.question);
         questionBox = findViewById(R.id.questionBox);
+
         buildRecycleView();
-        Button btn = findViewById(R.id.buttonNext);
+        final Button btn = findViewById(R.id.buttonNext);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ans != -1){
-                    answer.add(ans);
-                    ans = -1;
-                    number ++;
-                    buildRecycleView();
+                if(answer.size() == 45){
+                    btn.setText("Predict");
+                    if (ans != -1) {
+                        answer.add(ans);
+                        ans = -1;
+                        number++;
+                        buildRecycleView();
+                    } else {
+                        Toast.makeText(PredictionPage.this, "Please Select Answer", Toast.LENGTH_LONG).show();
+                    }
+                    
                 }
-                else{
-                    Toast.makeText(PredictionPage.this,"Please Select Answer",Toast.LENGTH_LONG).show();
+                else {
+                    if (ans != -1) {
+                        answer.add(ans);
+                        ans = -1;
+                        number++;
+                        buildRecycleView();
+                    } else {
+                        Toast.makeText(PredictionPage.this, "Please Select Answer", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
+
     }
 
     public void buildRecycleView(){
         question.setText(no+(number+1));
-        questionBox.setText(questions[number+1]);
+        questionBox.setText(questions[number]);
         choiceRecycle = findViewById(R.id.choice);
         choiceRecycle.setHasFixedSize(true);
         mListView = new LinearLayoutManager(this);
@@ -76,4 +91,8 @@ public class PredictionPage extends AppCompatActivity {
         });
 
     }
+//    public void setBtnText(int id){
+//        Button button = findViewById(id);
+//        button.setText();
+//    }
 }

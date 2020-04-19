@@ -11,23 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:background="#660C75"
+        android:fontFamily="cursive"
         android:gravity="center"
-        android:text="CLICK!!!"
+        android:text="Click"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:fontFamily="@font/mitr" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-<!--    <ListView-->
-<!--        android:id="@+id/listView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent" >-->
+    </androidx.recyclerview.widget.RecyclerView>
 
-<!--    </ListView>-->
+    <!--    <ListView-->
+    <!--        android:id="@+id/listView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent" >-->
+
+    <!--    </ListView>-->
 </LinearLayout>
 
 
