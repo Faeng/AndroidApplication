@@ -9,6 +9,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PredictionPage"></activity>
+        <activity android:name=".LoveSongPage" />
+        <activity android:name=".ActivityItemPage46" />
+        <activity android:name=".ActivityItemPage45" />
+        <activity android:name=".ActivityItemPage44" />
+        <activity android:name=".ActivityItemPage42" />
+        <activity android:name=".ActivityItemPage41" />
+        <activity android:name=".ActivityItemPage40" />
+        <activity android:name=".ActivityItemPage39" />
+        <activity android:name=".ActivityItemPage38" />
+        <activity android:name=".ActivityItemPage37" />
+        <activity android:name=".ActivityItemPage36" />
+        <activity android:name=".ActivityItemPage35" />
+        <activity android:name=".ActivityItemPage34" />
+        <activity android:name=".ActivityItemPage33" />
+        <activity android:name=".ActivityItemPage43" />
+        <activity android:name=".ActivityItemPage32" />
+        <activity android:name=".ActivityItemPage31" />
+        <activity android:name=".ActivityItemPage30" />
+        <activity android:name=".ActivityItemPage29" />
+        <activity android:name=".ActivityItemPage28" />
+        <activity android:name=".ActivityItemPage27" />
+        <activity android:name=".ActivityItemPage26" />
+        <activity android:name=".ActivityItemPage25" />
+        <activity android:name=".ActivityItemPage24" />
+        <activity android:name=".ActivityItemPage23" />
+        <activity android:name=".ActivityItemPage22" />
+        <activity android:name=".ActivityItemPage21" />
+        <activity android:name=".ActivityItemPage20" />
+        <activity android:name=".ActivityItemPage19" />
+        <activity android:name=".ActivityItemPage18" />
+        <activity android:name=".ActivityItemPage17" />
+        <activity android:name=".ActivityItemPage16" />
+        <activity android:name=".ActivityItemPage15" />
+        <activity android:name=".ActivityItemPage14" />
+        <activity android:name=".ActivityItemPage13" />
+        <activity android:name=".ActivityItemPage12" />
+        <activity android:name=".ActivityItemPage11" />
+        <activity android:name=".ActivityItemPage10" />
+        <activity android:name=".ActivityItemPage9" />
+        <activity android:name=".ActivityItemPage8" />
+        <activity android:name=".ActivityItemPage7" />
+        <activity android:name=".ActivityItemPage6" />
+        <activity android:name=".ActivityItemPage5" />
+        <activity android:name=".ActivityItemPage4" />
+        <activity android:name=".ActivityItemPage3" />
+        <activity android:name=".ActivityItemPage2" />
+        <activity android:name=".ActivityItemPage1" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +64,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
